@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"
 import SideNavbar from "../../components/admin/SideNavbar"
 
 const AdminView = () => {
@@ -8,7 +9,7 @@ const AdminView = () => {
             <main class="main-content position-relative border-radius-lg ">
                 <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
                     <div class="container-fluid py-1 px-3">
-                        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end" id="navbar">
                             <ul class="navbar-nav  justify-content-end">
                                 <li class="nav-item d-flex align-items-center">
                                     <div class="text-white font-weight-bold px-0">
@@ -25,6 +26,9 @@ const AdminView = () => {
                         </div>
                     </div>
                 </nav>
+                <div className="container-fluid py-4">
+                    <Outlet />
+                </div>
             </main>
         </div>
     )

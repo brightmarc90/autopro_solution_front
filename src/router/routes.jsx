@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeView from "../views/client/HomeView";
 import LoginView from "../views/admin/LoginView";
 import AdminView from "../views/admin/AdminView";
+import ServiceView from "../views/admin/services/ServiceView";
 
 const routes = createBrowserRouter([
     {
@@ -11,6 +12,12 @@ const routes = createBrowserRouter([
     {
         path: "/admin",
         element: <AdminView />,
+        children: [
+            {
+                path: "services",
+                element: <ServiceView />
+            }
+        ]
     },
     {
         path: "/admin/login",
